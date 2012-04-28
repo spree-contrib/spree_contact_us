@@ -1,0 +1,12 @@
+\#*
+*~
+.#*
+.DS_Store
+.idea
+.project
+coverage
+Gemfile.lock
+tmp
+nbproject
+*.swp
+spec/dummy

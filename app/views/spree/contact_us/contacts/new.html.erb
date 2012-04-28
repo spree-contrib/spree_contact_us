@@ -1,0 +1,44 @@
+<% content_for :head do -%>
+  <meta name="title" content="Contact Us">
+<% end -%>
+
+<% content_for :sidebar do %>
+  <% if "products" == @current_controller && @taxon %>
+    <%= render :partial => "spree/shared/filters" %>
+  <% else %>
+    <%= render :partial => "spree/shared/taxonomies" %>
+  <% end %>
+<% end %>
+
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
+
+<h1><%= t('.contact_us') %></h1>
+<%= form_for @contact, :url => contacts_path do |f| %>
+  <% if SpreeContactUs.require_name %>
+    <p>
+      <%= f.label :name %>
+      <br/>
+      <%= f.text_field :name %>
+    </p>
+  <% end %>
+  <p>
+    <%= f.label :email %>
+    <br/>
+    <%= f.email_field :email %>
+  </p>
+  <% if SpreeContactUs.require_subject %>
+    <p>
+      <%= f.label :subject %>
+      <br/>
+      <%= f.text_field :subject %>
+    </p>
+  <% end %>
+  <p>
+    <%= f.label :message %>
+    <br/>
+    <%= f.text_area :message %>
+  </p>
+  <p>
+    <%= f.submit t('.submit'), :alt => t('.submit'), :id => 'contact_us_contact_submit', :title => t('.submit') %>
+  </p>
+<% end %>
