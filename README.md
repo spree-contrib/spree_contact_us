@@ -1,9 +1,9 @@
-# SpreeContactUs [![Build Status](https://secure.travis-ci.org/jdutil/spree_contact_us.png)](http://travis-ci.org/jdutil/spree_contact_us) [![Dependency Status](https://gemnasium.com/jdutil/spree_contact_us.png?travis)](https://gemnasium.com/jdutil/contact_us) [![Click here to lend your support to: ContactUs and make a donation at www.pledgie.com !](https://www.pledgie.com/campaigns/16807.png?skin_name=chrome)][pledgie]
+# SpreeContactUs [![Build Status](https://secure.travis-ci.org/jdutil/spree_contact_us.png)](http://travis-ci.org/jdutil/spree_contact_us) [![Dependency Status](https://gemnasium.com/jdutil/spree_contact_us.png?travis)](https://gemnasium.com/jdutil/contact_us) [![Click here to lend your support to: ContactUs and make a donation at www.pledgie.com !](https://www.pledgie.com/campaigns/17259.png?skin_name=chrome)][pledgie]
 A Rails 3+ Engine providing a basic contact form as a Spree Extension.
 
 [travis]: http://travis-ci.org/jdutil/spree_contact_us
 [gemnasium]: https://gemnasium.com/jdutil/spree_contact_us
-[pledgie]: http://www.pledgie.com/campaigns/16807
+[pledgie]: http://www.pledgie.com/campaigns/17259
 
 Modified version of the `contact_us` gem to work with Spree.
 
@@ -92,7 +92,6 @@ Be sure to bundle your dependencies and then create a dummy test app for the spe
 
 ## TODO
 
-* Fix pledgie and any issues with travis / gemnasium
 * Modify settings within the admin
 * Add new language translations
 
