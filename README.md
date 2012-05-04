@@ -13,10 +13,8 @@ For more information please see https://github.com/jdutil/contact_us
 
 SpreeContactUs requires:
 
-* Spree Core 1.1.0.rc2 or greater
+* Spree Core 1.1.0 or greater
 * Ruby 1.9.2 or greater.
-
-If you would like to run on Spree 1.0.x or Ruby 1.8.7 everything should just work by modifying your forks gemspec.  I do not intend to support these older versions though.
 
 ## INSTALLATION
 

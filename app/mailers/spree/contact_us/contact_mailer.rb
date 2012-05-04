@@ -3,7 +3,8 @@ class Spree::ContactUs::ContactMailer < ActionMailer::Base
     @contact = contact
 
     mail :from    => (SpreeContactUs.mailer_from || contact.email),
-         :subject => (SpreeContactUs.require_subject ? @contact.subject : t('spree.contact_us.contact_mailer.contact_email.subject', :email => contact.email)),
+         :reply_to => @contact.email,
+         :subject => (SpreeContactUs.require_subject ? @contact.subject : t('spree.contact_us.contact_mailer.contact_email.subject', :email => @contact.email)),
          :to      => SpreeContactUs.mailer_to
   end
 end
