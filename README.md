@@ -26,7 +26,7 @@ To install from edge:
 
 Or install from latest stable version:
 
-    gem 'spree_contact_us', '~> 1.0.0'
+    gem 'spree_contact_us', '~> 1.0.1'
 
 From `Rails.root` run:
 
