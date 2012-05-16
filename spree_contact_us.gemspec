@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_contact_us'
-  s.version     = '1.0.1'
+  s.version     = '1.1.0'
   s.summary     = 'Reworked the contact_us gem to add a basic contact us form to Spree.'
   s.description = 'Reworked the contact_us gem to add a basic contact us form to Spree.'
   s.required_ruby_version = '>= 1.9.2'
