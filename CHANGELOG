@@ -1,0 +1,5 @@
+*SpreeContactUs 1.0.2 (unreleased)*
+
+* Changed route to /contact-us from /contract_us for seo. [Jeff Dutil]
+
+* Allow Spree Core 1.0.x [Jeff Dutil]

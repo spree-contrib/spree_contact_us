@@ -13,7 +13,7 @@ For more information please see https://github.com/jdutil/contact_us
 
 SpreeContactUs requires:
 
-* Spree Core 1.1.0 or greater
+* Spree Core 1.0.0 or greater
 * Ruby 1.9.2 or greater.
 
 ## INSTALLATION
@@ -57,7 +57,7 @@ You may also update your locales under `config/locales/spree_contact_us.en.yml` 
 
 ## USAGE
 
-Visit your website and navigate to `/contact_us` to see the form in action.
+Visit your website and navigate to `/contact-us` to see the form in action.
 
 ## ISSUES
 
