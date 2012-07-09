@@ -19,11 +19,6 @@ en:
       contacts:
         new:
           contact_us: "Contact Us"
-          email: "Email"
-          message: "Message"
-          name: "Name"
-          subject: "Subject"
           submit: "Submit"
       notices:
         success: "Contact email was successfully sent."
-
