@@ -2,6 +2,13 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  activemodel:
+    attributes:
+      spree/contact_us/contact:
+        name: "Name"
+        email: "Email"
+        message: "Message"
+        subject: "Subject"
   spree:
     contact_us:
       contact_mailer:
@@ -19,3 +26,4 @@ en:
           submit: "Submit"
       notices:
         success: "Contact email was successfully sent."
+
