@@ -4,7 +4,9 @@ class Spree::ContactUs::ContactsController < Spree::BaseController
     @contact = Spree::ContactUs::Contact.new(params[:contact_us_contact])
 
     if @contact.save
-      flash[:contact_tracking] = "nothing special"
+      if Spree::ContactUs::Config.flash_message_on_contact_sent.present?
+        flash[:contact_tracking] = Spree::ContactUs::Config.flash_message_on_contact_sent
+      end
       redirect_to('/', :notice => t('spree.contact_us.notices.success'))
     else
       render :new
