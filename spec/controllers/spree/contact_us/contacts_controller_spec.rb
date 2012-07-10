@@ -19,7 +19,7 @@ describe Spree::ContactUs::ContactsController do
   end
 
   context "if conversion code preference is not empty" do
-    before do
+    before(:each) do
       Spree::ContactUs::Config.flash_message_on_contact_sent = 'something'
     end
 
