@@ -59,6 +59,21 @@ You may also update your locales under `config/locales/spree_contact_us.en.yml` 
 
 Visit your website and navigate to `/contact-us` to see the form in action.
 
+## ADD A CONVERISION CODE ON CONTACT SENT
+
+If you need to print a conversion code on contact sent, you can setup a spree preference for this. Just open a Rails console in your application and launch:
+
+    Spree::ContactUs::Config[:flash_message_on_contact_sent] = 'nothing special'
+
+Everything that is not an empty string will cause a flash[:contact_tracking] message to be created.
+Now, somewhere in your layout, you can add:
+
+    <% if flash[:contact_tracking] %>
+        put your conversion code here
+    <% end %>
+
+By default the preference has an empty string value so no flash will be created until you don't need it.
+
 ## ISSUES
 
 Please report any bugs or feature requests to the Github issues page @ https://github.com/jdutil/spree_contact_us/issues
