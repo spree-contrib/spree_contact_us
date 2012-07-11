@@ -64,7 +64,7 @@ If you need to print a conversion tracking code on contact sent, you can setup a
 Everything that is not an empty string will cause a flash ("contact_tracking") message to be created. You can use it somewhere in your layout like this:
 
     <% if flash[:contact_tracking] %>
-        put your conversion tacking code here
+        put your conversion tracking code here
     <% end %>
 
 By default the preference has an empty string value so no flash messages will be created until you don't need it.
