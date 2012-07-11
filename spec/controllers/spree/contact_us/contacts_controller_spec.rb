@@ -7,7 +7,7 @@ describe Spree::ContactUs::ContactsController do
 
   context "if conversion code preference is empty" do
     before do
-      Spree::ContactUs::Config.flash_message_on_contact_sent = ''
+      Spree::ContactUs::Config.contact_tracking_message = ''
     end
 
     it "should redirect to root path with no contact tracking flash message" do
@@ -20,7 +20,7 @@ describe Spree::ContactUs::ContactsController do
 
   context "if conversion code preference is not empty" do
     before(:each) do
-      Spree::ContactUs::Config.flash_message_on_contact_sent = 'something'
+      Spree::ContactUs::Config.contact_tracking_message = 'something'
     end
 
     it "should redirect to root path with both notice and conversion flash messages" do

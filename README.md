@@ -59,7 +59,7 @@ You may also update your locales under `config/locales/spree_contact_us.en.yml` 
 
 If you need to print a conversion tracking code on contact sent, you can setup a spree preference for this. Just open a Rails console in your application and launch:
 
-    Spree::ContactUs::Config[:flash_message_on_contact_sent] = 'nothing special'
+    Spree::ContactUs::Config[:contact_tracking_message] = 'nothing special'
 
 Everything that is not an empty string will cause a flash ("contact_tracking") message to be created. You can use it somewhere in your layout like this:
 
