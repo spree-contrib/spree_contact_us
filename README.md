@@ -55,24 +55,23 @@ If you would like to add a name or subject field to the form you may simply set 
 
 You may also update your locales under `config/locales/spree_contact_us.en.yml` or create your own.  Please feel free to submit your own locales so that other users will hopefully find this gem more useful.
 
-## USAGE
+#### ADD A CONVERISION TRACKING CODE
 
-Visit your website and navigate to `/contact-us` to see the form in action.
-
-## ADD A CONVERISION CODE ON CONTACT SENT
-
-If you need to print a conversion code on contact sent, you can setup a spree preference for this. Just open a Rails console in your application and launch:
+If you need to print a conversion tracking code on contact sent, you can setup a spree preference for this. Just open a Rails console in your application and launch:
 
     Spree::ContactUs::Config[:flash_message_on_contact_sent] = 'nothing special'
 
-Everything that is not an empty string will cause a flash[:contact_tracking] message to be created.
-Now, somewhere in your layout, you can add:
+Everything that is not an empty string will cause a flash ("contact_tracking") message to be created. You can use it somewhere in your layout like this:
 
     <% if flash[:contact_tracking] %>
-        put your conversion code here
+        put your conversion tacking code here
     <% end %>
 
-By default the preference has an empty string value so no flash will be created until you don't need it.
+By default the preference has an empty string value so no flash messages will be created until you don't need it.
+
+## USAGE
+
+Visit your website and navigate to `/contact-us` to see the form in action.
 
 ## ISSUES
 
