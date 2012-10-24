@@ -1,4 +1,4 @@
-class Spree::ContactUs::ContactsController < Spree::BaseController
+class Spree::ContactUs::ContactsController < Spree::StoreController
 
   helper "spree/products"
   def create

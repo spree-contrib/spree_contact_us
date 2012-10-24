@@ -35,6 +35,7 @@ require 'spree/core/testing_support/controller_requests'
 require 'spree/core/url_helpers'
 
 RSpec.configure do |config|
+  config.include FactoryGirl::Syntax::Methods
   config.include Spree::Core::UrlHelpers
   config.include Spree::Core::TestingSupport::ControllerRequests
 end
