@@ -4,6 +4,26 @@ describe Spree::ContactUs::Contact do
 
   it_should_behave_like 'ActiveModel'
 
+  describe "building" do
+    it "methods" do
+      params = {:email => "test@example.com", :message => "message"}
+      params.default = "foo"
+      contact = described_class.new(params)
+      contact.subject.should_not == "foo"
+    end
+
+    it "should scrub attributes" do
+      lambda {
+        described_class.new(:email => "test@example.com", :message => "foo", :destroy => true)
+      }.should_not raise_error
+    end
+
+    it "should not aloow bypass of validation" do
+      v = described_class.new(:email => "test@example.com", :message => "foo", "validation_context" => "update")
+      v.validation_context.should_not == "update"
+    end
+  end
+
   describe "Validations" do
 
     it {should validate_presence_of(:email)}
