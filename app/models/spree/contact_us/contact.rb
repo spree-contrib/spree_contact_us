@@ -14,8 +14,8 @@ module Spree
       validates :subject, :presence => {:if => Proc.new{SpreeContactUs.require_subject}}
 
       def initialize(attributes = {})
-        attributes.each do |key, value|
-          self.send("#{key}=", value)
+        [:email, :message, :name, :subject].each do |attribute|
+          self.send("#{attribute}=", attributes[attribute]) if attributes and attributes.has_key?(attribute)
         end
       end
 
@@ -26,7 +26,7 @@ module Spree
         end
         return false
       end
-  
+
       def persisted?
         false
       end
