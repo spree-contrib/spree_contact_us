@@ -30,4 +30,12 @@ describe Spree::ContactUs::ContactsController do
       response.should redirect_to(spree.root_path)
     end
   end
+
+  context "prevent malicious posts" do
+    it "should not error when contact_us_contact is not present" do
+      lambda do
+      spree_post :create, {"utf8"=>"a", "g=contact_us_contact"=>{"nam"=>""}, "xtcontact_us_contact"=>{"emai"=>""}, "ilcontact_us_contact"=>{"messag"=>"ea_n"}, "l_comm"=>"itSend Messa"}
+      end.should_not raise_error
+    end
+  end
 end
