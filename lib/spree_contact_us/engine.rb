@@ -4,7 +4,11 @@ module SpreeContactUs
 
     config.autoload_paths += %W(#{config.root}/lib)
 
-    initializer "spree.contact_us.preferences", :after => "spree.environment" do |app|
+    initializer "spree_contact_us.add_middleware" do |app|
+      app.middleware.use Rack::Honeypot
+    end
+
+    initializer "spree_contact_us.preferences", :after => "spree.environment" do |app|
       module Spree::ContactUs
         Config = Spree::ContactUsConfiguration.new
       end
