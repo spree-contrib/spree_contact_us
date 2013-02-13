@@ -15,10 +15,10 @@ es:
         contact_email:
           sent_by_contact_form: "Enviado por el formulario de contacto desde %{email}"
           sent_by_name: "Enviado por %{name} desde %{email}"
-          subject: "Mensaje de contáctanos desde %{email}"
+          subject: "Mensaje de contacto desde %{email}"
       contacts:
         new:
           contact_us: "Contacto"
           submit: "Enviar"
       notices:
-        success: "El email de contacto se ha enviado correctamente."
+        success: "El mensaje de contacto se ha enviado correctamente."
