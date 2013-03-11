@@ -33,25 +33,14 @@ From `Rails.root` run:
     $ bundle
     $ bundle exec rails g spree_contact_us:install
 
-In `config/initializers/spree_contact_us.rb` modify:
-
-    config.mailer_to = "contact@please-change-me.com"
-
-Change to the email address you would like to receive the form submissions at for example:
-
-    config.mailer_to = "contact@yourdomain.com"
-
-By default the emails from field will be the email entered by the user to easily reply, but this may not be allowed if your required to verify your sending email addresses.
-You may also specify an email address for the notification emails from field:
-
-    config.mailer_from = "dontreply@yourdomain.com"
-
 ## CONFIGURATION
 
 If you would like to add a name or subject field to the form you may simply set the options to true within the spree_contact_us initializer located at `config/initializers/spree_contact_us.rb`:
 
     config.require_name = true
     config.require_subject = true
+
+You can also change config.mailer_to and config.mailer_from or let nil values for use the current Spree Mail Method (you can add one in the admin configurations)
 
 You may also update your locales under `config/locales/spree_contact_us.en.yml` or create your own.  Please feel free to submit your own locales so that other users will hopefully find this gem more useful.
 
