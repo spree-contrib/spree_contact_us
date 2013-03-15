@@ -13,7 +13,7 @@
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
 
 <h1><%= t('.contact_us') %></h1>
-<%= form_for @contact, :url => contacts_path do |f| %>
+<%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
   <% if SpreeContactUs.require_name %>
     <p>
       <%= f.label :name %>
