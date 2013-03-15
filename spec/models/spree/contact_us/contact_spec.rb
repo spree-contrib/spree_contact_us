@@ -18,7 +18,7 @@ describe Spree::ContactUs::Contact do
       }.should_not raise_error
     end
 
-    it "should not aloow bypass of validation" do
+    it "should not allow bypass of validation" do
       v = described_class.new(:email => "test@example.com", :message => "foo", "validation_context" => "update")
       v.validation_context.should_not == "update"
     end
