@@ -1,4 +1,4 @@
-# SpreeContactUs [![Build Status](https://secure.travis-ci.org/jdutil/spree_contact_us.png)](http://travis-ci.org/jdutil/spree_contact_us) [![Dependency Status](https://gemnasium.com/jdutil/spree_contact_us.png?travis)](https://gemnasium.com/jdutil/spree_contact_us) [![Click here to lend your support to: SpreeContactUs and make a donation at www.pledgie.com !](https://www.pledgie.com/campaigns/17259.png?skin_name=chrome)][pledgie]
+# SpreeContactUs [![Build Status](https://secure.travis-ci.org/jdutil/spree_contact_us.png)](http://travis-ci.org/jdutil/spree_contact_us) [![Dependency Status](https://gemnasium.com/jdutil/spree_contact_us.png?travis)](https://gemnasium.com/jdutil/spree_contact_us) [![Click here to lend your support to: SpreeContactUs and make a donation at www.pledgie.com !](http://www.pledgie.com/campaigns/17259.png?skin_name=chrome)][pledgie]
 A Rails 3+ Engine providing a basic contact form as a Spree Extension.
 
 [travis]: http://travis-ci.org/jdutil/spree_contact_us
