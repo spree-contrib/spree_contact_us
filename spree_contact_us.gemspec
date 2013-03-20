@@ -18,14 +18,14 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'spree_core', '~> 2.0.0.beta'
 
-  s.add_development_dependency 'capybara',         '~> 1.1'
+  s.add_development_dependency 'capybara',         '~> 2.0'
   s.add_development_dependency 'coffee-rails'
-  s.add_development_dependency 'factory_girl',     '~> 3.6'
-  s.add_development_dependency 'ffaker',           '~> 1.12'
+  s.add_development_dependency 'factory_girl',     '~> 4.2'
+  s.add_development_dependency 'ffaker',           '~> 1.15'
   s.add_development_dependency 'generator_spec',   '~> 0.8'
-  s.add_development_dependency 'rspec-rails',      '~> 2.9'
+  s.add_development_dependency 'rspec-rails',      '~> 2.13'
   s.add_development_dependency 'sass-rails'
-  s.add_development_dependency 'shoulda-matchers', '~> 1.4.0'
-  s.add_development_dependency 'simplecov',        '~> 0.6.2'
+  s.add_development_dependency 'shoulda-matchers', '~> 1.3.0'
+  s.add_development_dependency 'simplecov',        '~> 0.7'
   s.add_development_dependency 'sqlite3',          '~> 1.3.6'
 end
