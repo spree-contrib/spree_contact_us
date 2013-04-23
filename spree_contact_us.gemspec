@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'generator_spec',   '~> 0.8'
   s.add_development_dependency 'rspec-rails',      '~> 2.13'
   s.add_development_dependency 'sass-rails'
+  s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'shoulda-matchers', '>= 1.5.4'
   s.add_development_dependency 'simplecov',        '~> 0.7'
   s.add_development_dependency 'sqlite3',          '~> 1.3.6'

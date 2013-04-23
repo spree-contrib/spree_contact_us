@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Contact Us page' do
+describe 'Contact Us page', js: true do
 
   after do
     ActionMailer::Base.deliveries = []
@@ -13,6 +13,9 @@ describe 'Contact Us page' do
   before do
     ActionMailer::Base.deliveries = []
     SpreeContactUs.mailer_to = 'test@test.com'
+    reset_spree_preferences do |config|
+      config.enable_mail_delivery = true
+    end
   end
 
   it 'displays default contact form properly' do
@@ -64,10 +67,8 @@ describe 'Contact Us page' do
         end
 
         it "I should see two error messages" do
-          within '#errorExplanation' do
-            page.should have_content "Email is invalid"
-            page.should have_content "Message can't be blank"
-          end
+          page.should have_content "Please enter a valid email address"
+          page.should have_content "This field is required"
         end
 
         it "An email should not have been sent" do
@@ -124,10 +125,7 @@ describe 'Contact Us page' do
         end
 
         it "I should see error messages" do
-          within '#errorExplanation' do
-            page.should have_content "Email can't be blank"
-            page.should have_content "Message can't be blank"
-          end
+          page.should have_content "This field is required"
         end
 
         it "An email should not have been sent" do

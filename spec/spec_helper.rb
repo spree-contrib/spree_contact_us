@@ -32,10 +32,12 @@ Dir[File.join(File.dirname(__FILE__), "support/**/*.rb")].each {|f| require f }
 # Requires factories defined in spree_core
 require 'spree/testing_support/factories'
 require 'spree/testing_support/controller_requests'
+require 'spree/testing_support/preferences'
 require 'spree/testing_support/url_helpers'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.include Spree::TestingSupport::ControllerRequests
+  config.include Spree::TestingSupport::Preferences
   config.include Spree::TestingSupport::UrlHelpers
 end
