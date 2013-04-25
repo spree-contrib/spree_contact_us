@@ -3,9 +3,10 @@ require 'spec_helper'
 describe SpreeContactUs do
 
   after do
-    SpreeContactUs.mailer_from = nil
-    SpreeContactUs.mailer_to = nil
-    SpreeContactUs.require_name = false
+    # Reset to defaults.
+    SpreeContactUs.mailer_from     = nil
+    SpreeContactUs.mailer_to       = 'contact@please-change-me.com'
+    SpreeContactUs.require_name    = false
     SpreeContactUs.require_subject = false
   end
 
@@ -30,8 +31,8 @@ describe SpreeContactUs do
 
   describe 'mailer_to' do
     it 'should be configurable' do
-      SpreeContactUs.mailer_to = "contact@please-change-me.com"
-      SpreeContactUs.mailer_to.should eql("contact@please-change-me.com")
+      SpreeContactUs.mailer_to = "contact@changed-me.com"
+      SpreeContactUs.mailer_to.should eql("contact@changed-me.com")
     end
   end
 

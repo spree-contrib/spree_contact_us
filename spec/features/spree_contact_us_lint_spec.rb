@@ -12,10 +12,7 @@ describe 'Contact Us page', js: true do
 
   before do
     ActionMailer::Base.deliveries = []
-    SpreeContactUs.mailer_to = 'test@test.com'
-    reset_spree_preferences do |config|
-      config.enable_mail_delivery = true
-    end
+    SpreeContactUs.mailer_to = 'contact@please-change-me.com'
   end
 
   it 'displays default contact form properly' do
@@ -46,13 +43,10 @@ describe 'Contact Us page', js: true do
         current_path.should == "/"
       end
 
-      it "An email should have been sent" do
+      it "The email should have been sent with the correct attributes" do
         ActionMailer::Base.deliveries.size.should == 1
-      end
-
-      it "The email should have the correct attributes" do
         mail = ActionMailer::Base.deliveries.last
-        mail.to.should == ['test@test.com']
+        mail.to.should == ['contact@please-change-me.com']
         mail.from.should == ['test@example.com']
         mail.body.should match 'howdy'
       end
@@ -80,8 +74,13 @@ describe 'Contact Us page', js: true do
 
   context 'with name and subject configuration' do
 
+    after do
+      SpreeContactUs.require_name    = false
+      SpreeContactUs.require_subject = false
+    end
+
     before do
-      SpreeContactUs.require_name = true
+      SpreeContactUs.require_name    = true
       SpreeContactUs.require_subject = true
       visit spree.contact_us_path
     end
@@ -105,17 +104,14 @@ describe 'Contact Us page', js: true do
           current_path.should == "/"
         end
 
-        it "An email should have been sent" do
+        it "The email should have been sent with the correct attributes" do
           ActionMailer::Base.deliveries.size.should == 1
-        end
-
-        it "The email should have the correct attributes" do
           mail = ActionMailer::Base.deliveries.last
           mail.body.should match 'howdy'
           mail.body.should match 'Jeff'
           mail.from.should == ['test@example.com']
           mail.subject.should match 'Testing contact form.'
-          mail.to.should == ['test@test.com']
+          mail.to.should == ['contact@please-change-me.com']
         end
       end
 

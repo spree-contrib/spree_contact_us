@@ -77,6 +77,19 @@ Visit your website and navigate to `/contact-us` to see the form in action.
 
 Please report any bugs or feature requests to the Github issues page @ https://github.com/jdutil/spree_contact_us/issues
 
+## Testing
+
+Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.
+
+    $ bundle
+    $ bundle exec rake test_app
+    $ bundle exec rspec spec
+
+## TODO
+
+* Modify settings within the admin
+* Add new language translations
+
 ## CONTRIBUTING
 
 In the spirit of [free software](http://www.fsf.org/licensing/essays/free-sw.html), **everyone** is encouraged to help improve this project.
@@ -94,17 +107,8 @@ Here are some ways *you* can contribute:
 * by resolving [issues](https://github.com/jdutil/spree_contact_us/issues)
 * by reviewing patches
 
-## Testing
+## Donating
 
-Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.
+Bitcoin donations may be sent to: 15VHpDKWpuu8XyPpbTbRbewSRzMu5cVBMr
 
-    $ bundle
-    $ bundle exec rake test_app
-    $ bundle exec rspec spec
-
-## TODO
-
-* Modify settings within the admin
-* Add new language translations
-
-Copyright (c) 2012 Jeff Dutil, released under the [New BSD License](https://github.com/jdutil/spree_contact_us/tree/master/LICENSE).
+Copyright (c) 2012-2013 Jeff Dutil, released under the [New BSD License](https://github.com/jdutil/spree_contact_us/tree/master/LICENSE).
