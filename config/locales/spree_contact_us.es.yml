@@ -6,6 +6,7 @@ es:
     attributes:
       spree/contact_us/contact:
         name: "Nombre"
+        phone: "Teléfono"
         email: "Email"
         message: "Mensaje"
         subject: "Asunto"
@@ -15,6 +16,7 @@ es:
         contact_email:
           sent_by_contact_form: "Enviado por el formulario de contacto desde %{email}"
           sent_by_name: "Enviado por %{name} desde %{email}"
+          phone: "Telefono: %{phone}"
           subject: "Mensaje de contacto desde %{email}"
       contacts:
         new:
