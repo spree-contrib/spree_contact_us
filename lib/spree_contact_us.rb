@@ -15,6 +15,9 @@ module SpreeContactUs
   # Enable or Disable subject field.
   mattr_accessor :require_subject
 
+  # Enable or Disable phone field.
+  mattr_accessor :require_phone
+
   # Default way to setup ContactUs. Run rake contact_us:install to create
   # a fresh initializer with all configuration values.
   def self.setup
