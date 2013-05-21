@@ -21,6 +21,12 @@
       <%= f.text_field :name, class: 'required' %>
     </p>
   <% end %>
+  <% if SpreeContactUs.require_phone %>
+    <p>
+      <%= f.label :phone %><br/>
+      <%= f.phone_field :phone %>
+    </p>
+  <% end %>
   <p>
     <%= f.label :email %>
     <span class="required">*</span><br/>

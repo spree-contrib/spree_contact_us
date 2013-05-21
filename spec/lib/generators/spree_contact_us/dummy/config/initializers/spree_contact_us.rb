@@ -20,4 +20,6 @@ SpreeContactUs.setup do |config|
   # Configure the form to ask for a subject.
   config.require_subject = false
 
+  # Configure the form to ask for a phone.
+  config.require_phone = false
 end
