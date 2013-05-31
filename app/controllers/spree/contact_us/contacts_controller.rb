@@ -21,7 +21,7 @@ class Spree::ContactUs::ContactsController < Spree::StoreController
   private
 
   def accurate_title
-    t('spree.contact_us.contacts.new.contact_us')
+    t('contact_us')
   end
 
 end

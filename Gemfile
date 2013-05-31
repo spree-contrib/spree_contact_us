@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-# Remove once stable 2.0.0 released.
-gem 'spree', github: 'spree/spree'
+gem 'spree', github: 'spree/spree', branch: '2-0-stable'
 
 gemspec

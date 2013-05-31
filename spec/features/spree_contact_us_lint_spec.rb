@@ -11,6 +11,7 @@ describe 'Contact Us page', js: true do
   end
 
   before do
+    Spree::Config[:enable_mail_delivery] = true
     ActionMailer::Base.deliveries = []
     SpreeContactUs.mailer_to = 'contact@please-change-me.com'
   end
