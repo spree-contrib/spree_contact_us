@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'capybara',         '~> 2.1'
   s.add_development_dependency 'coffee-rails'
-  s.add_development_dependency 'database_cleaner'
+  s.add_development_dependency 'database_cleaner', '~> 1.0.1'
   s.add_development_dependency 'factory_girl',     '~> 4.2'
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'generator_spec',   '~> 0.8'
@@ -29,5 +29,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'shoulda-matchers', '~> 2.0'
   s.add_development_dependency 'simplecov'
-  s.add_development_dependency 'sqlite3',          '~> 1.3.6'
+  s.add_development_dependency 'sqlite3',          '~> 1.3.8'
 end
