@@ -1,0 +1,17 @@
+fr:
+  activemodel:
+    attributes:
+      spree/contact_us/contact:
+        name: "Nom"
+        email: "Courriel"
+        message: "Message"
+        subject: "Sujet"
+  contact_us: "Contactez-nous"
+  sent_by_contact_form: "Envoyé par formulaire à partir de %{email}"
+  sent_by_name: "Envoyé par %{name} de %{email}"
+  subject: "Message contactez-nous de %{email}"
+  submit: "Envoyer"
+  spree:
+    contact_us:
+      notices:
+        success: "Votre message a été envoyé avec succès."

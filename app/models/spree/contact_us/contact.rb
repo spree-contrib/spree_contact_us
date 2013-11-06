@@ -7,7 +7,17 @@ module Spree
 
       attr_accessor :email, :message, :name, :subject
 
-      validates :email,   :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i },
+      EMAIL_REGEX = /\A
+        [^\s@]+ # non-at-sign characters, at least one
+          @     # at-sign
+        [^\s.@] # non-at-sign and non-period character
+        [^\s@]* # 0 or more non-at-sign characters, accepts any number of periods
+         \.     # period
+        [^\s@]* # 0 or more non-at-sign characters, accepts any number of periods
+        [^\s.@] # non-at-sign and non-period character
+      \z/x
+
+      validates :email,   :format => { :with => EMAIL_REGEX },
                           :presence => true
       validates :message, :presence => true
       validates :name,    :presence => {:if => Proc.new{SpreeContactUs.require_name}}
