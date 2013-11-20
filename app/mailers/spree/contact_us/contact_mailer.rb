@@ -1,4 +1,4 @@
-class Spree::ContactUs::ContactMailer < ActionMailer::Base
+class Spree::ContactUs::ContactMailer < Spree::BaseMailer
   def contact_email(contact)
     @contact = contact
 
