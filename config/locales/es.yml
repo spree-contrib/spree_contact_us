@@ -1,0 +1,21 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es:
+  spree:
+    activemodel:
+      attributes:
+        contact_us/contact:
+          name: "Nombre"
+          email: "Email"
+          message: "Mensaje"
+          subject: "Asunto"
+    contact_us_title: "Contacto"
+    sent_by_contact_form: "Enviado por el formulario de contacto desde %{email}"
+    sent_by_name: "Enviado por %{name} desde %{email}"
+    subject: "Mensaje de contacto desde %{email}"
+    submit: "Enviar"
+
+    contact_us:
+      notices:
+        success: "El mensaje de contacto se ha enviado correctamente."
