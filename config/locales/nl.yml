@@ -1,0 +1,29 @@
+nl:
+  spree:
+    activemodel:
+      attributes:
+        contact_us/contact:
+          name: "Naam"
+          email: "Email"
+          message: "Vraag/opmerking"
+          subject: "Onderwerp"
+      errors:
+        models:
+          contact_us/contact:
+            attributes:
+              email:
+                invalid: "is niet geldig"
+                blank: "is leeg"
+              message:
+                blank: "is leeg"
+              name:
+                blank: "is leeg"
+    contact_us_title: "Contacteer ons"
+    sent_by_contact_form: "Contactformulier van %{email}"
+    sent_by_name: "Verstuurd door %{name} van %{email}"
+    subject: "Contactformulier - %{email}"
+    submit: "Verzend"
+
+    contact_us:
+      notices:
+        success: "Het contactformulier is succesvol verzonden. We nemen zo spoedig mogelijk contact met u op!"
