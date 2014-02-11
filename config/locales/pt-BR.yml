@@ -1,21 +1,18 @@
 'pt-BR':
-  activemodel:
-    attributes:
-      spree/contact_us/contact:
-        name: "Nome"
-        email: "Email"
-        message: "Mensagem"
-        subject: "Assunto"
   spree:
+    activemodel:
+      attributes:
+        contact_us/contact:
+          name: "Nome"
+          email: "Email"
+          message: "Mensagem"
+          subject: "Assunto"
+    contact_us_title: "Contato"
+    sent_by_contact_form: "Enviado pelo formulário de contato de %{email}"
+    sent_by_name: "Enviado por %{name} (%{email})"
+    subject: "Contato enviado por %{email}"
+    submit: "Enviar"
+
     contact_us:
-      contact_mailer:
-        contact_email:
-          sent_by_contact_form: "Enviado pelo formulário de contato de %{email}"
-          sent_by_name: "Enviado por %{name} (%{email})"
-          subject: "Contato enviado por %{email}"
-      contacts:
-        new:
-          contact_us: "Contato"
-          submit: "Enviar"
       notices:
         success: "Sua mensagem foi enviada com sucesso."

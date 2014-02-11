@@ -2,23 +2,20 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 de:
-  activemodel:
-    attributes:
-      spree/contact_us/contact:
-        name: "Name"
-        email: "Email"
-        message: "Nachricht"
-        subject: "Betreff"
   spree:
+    activemodel:
+      attributes:
+        contact_us/contact:
+          name: "Name"
+          email: "Email"
+          message: "Nachricht"
+          subject: "Betreff"
+    contact_us_title: "Kontakt"
+    sent_by_contact_form: "Gesendet durch Kontaktformular von %{email}"
+    sent_by_name: "Gesendet von %{name} via %{email}"
+    subject: "Kontaktanfrage von %{email}"
+    submit: "Abschicken"
+
     contact_us:
-      contact_mailer:
-        contact_email:
-          sent_by_contact_form: "Gesendet durch Kontaktformular von %{email}"
-          sent_by_name: "Gesendet von %{name} via %{email}"
-          subject: "Kontaktanfrage von %{email}"
-      contacts:
-        new:
-          contact_us: "Kontakt"
-          submit: "Abschicken"
       notices:
         success: "Kontaktanfrage wurde erfolgreich versendet."
