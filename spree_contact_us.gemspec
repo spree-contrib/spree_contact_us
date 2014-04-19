@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'generator_spec',   '~> 0.8'
   s.add_development_dependency 'rspec-rails',      '~> 2.13'
-  s.add_development_dependency 'sass-rails'
+  s.add_development_dependency 'sass-rails',       '~> 4.0.2'
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'shoulda-matchers', '~> 2.0'
   s.add_development_dependency 'simplecov'
