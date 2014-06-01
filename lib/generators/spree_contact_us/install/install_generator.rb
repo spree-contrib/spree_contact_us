@@ -6,7 +6,7 @@ module SpreeContactUs
       source_root File.expand_path('../../templates', __FILE__)
 
       def add_javascripts
-        append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/spree_contact_us\n"
+        append_file 'app/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/spree_contact_us\n"
       end
 
       def copy_initializer_file
