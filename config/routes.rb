@@ -1,4 +1,4 @@
-Spree::Core::Engine.routes.prepend do
+Spree::Core::Engine.add_routes do
   resources :contacts,
     :controller => 'contact_us/contacts',
     :only       => [:new, :create]
