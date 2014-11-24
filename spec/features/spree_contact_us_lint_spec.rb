@@ -47,7 +47,7 @@ describe 'Contact Us page', js: true do
         mail = ActionMailer::Base.deliveries.last
         mail.to.should == ['contact@please-change-me.com']
         mail.from.should == ['test@example.com']
-        mail.body.should match 'howdy'
+        mail.text_part.body.should match 'howdy'
         ActionMailer::Base.deliveries.size.should == 1
       end
     end
@@ -106,8 +106,8 @@ describe 'Contact Us page', js: true do
 
         it "The email should have been sent with the correct attributes" do
           mail = ActionMailer::Base.deliveries.last
-          mail.body.should match 'howdy'
-          mail.body.should match 'Jeff'
+          mail.text_part.body.should match 'howdy'
+          mail.text_part.body.should match 'Jeff'
           mail.from.should == ['test@example.com']
           mail.subject.should match 'Testing contact form.'
           mail.to.should == ['contact@please-change-me.com']
