@@ -18,25 +18,25 @@
     <p>
       <%= f.label :name %>
       <span class="required">*</span><br/>
-      <%= f.text_field :name, class: 'required' %>
+      <%= f.text_field :name, class: 'required form-control' %>
     </p>
   <% end %>
   <p>
     <%= f.label :email %>
     <span class="required">*</span><br/>
-    <%= f.email_field :email, class: 'required email' %>
+    <%= f.email_field :email, class: 'required form-control email' %>
   </p>
   <% if SpreeContactUs.require_subject %>
     <p>
       <%= f.label :subject %>
       <span class="required">*</span><br/>
-      <%= f.text_field :subject, class: 'required' %>
+      <%= f.text_field :subject, class: 'required form-control' %>
     </p>
   <% end %>
   <p>
     <%= f.label :message %>
     <span class="required">*</span><br/>
-    <%= f.text_area :message, class: 'required' %>
+    <%= f.text_area :message, class: 'required form-control' %>
   </p>
   <p>
     <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :id => 'contact_us_contact_submit', :title => Spree.t(:submit) %>
