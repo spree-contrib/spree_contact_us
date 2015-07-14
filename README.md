@@ -1,13 +1,15 @@
-# SpreeContactUs [![Build Status](https://secure.travis-ci.org/jdutil/spree_contact_us.png)](http://travis-ci.org/jdutil/spree_contact_us) [![Dependency Status](https://gemnasium.com/jdutil/spree_contact_us.png?travis)](https://gemnasium.com/jdutil/spree_contact_us) [![Click here to lend your support to: SpreeContactUs and make a donation at www.pledgie.com !](http://www.pledgie.com/campaigns/17259.png?skin_name=chrome)][pledgie]
+# SpreeContactUs
+[![Build Status](https://secure.travis-ci.org/spree-contrib/spree_contact_us.png)](http://travis-ci.org/spree-contrib/spree_contact_us) [![Dependency Status](https://gemnasium.com/spree-contrib/spree_contact_us.png?travis)](https://gemnasium.com/spree-contrib/spree_contact_us) [![Click here to lend your support to: SpreeContactUs and make a donation at www.pledgie.com !](http://www.pledgie.com/campaigns/17259.png?skin_name=chrome)][pledgie]
+
 A Rails 3+ Engine providing a basic contact form as a Spree Extension.
 
-[travis]: http://travis-ci.org/jdutil/spree_contact_us
-[gemnasium]: https://gemnasium.com/jdutil/spree_contact_us
+[travis]: http://travis-ci.org/spree-contrib/spree_contact_us
+[gemnasium]: https://gemnasium.com/spree-contrib/spree_contact_us
 [pledgie]: http://www.pledgie.com/campaigns/17259
 
 Modified version of the `contact_us` gem to work with Spree.
 
-For more information please see https://github.com/jdutil/contact_us
+For more information please see https://github.com/spree-contrib/contact_us
 
 ## REQUIREMENTS
 
@@ -22,7 +24,7 @@ In your `Gemfile`, add the following dependencies:
 
 To install from edge:
 
-    gem 'spree_contact_us', :git => 'https://github.com/jdutil/spree_contact_us'
+    gem 'spree_contact_us', :git => 'https://github.com/spree-contrib/spree_contact_us'
 
 Or install from latest stable version:
 
@@ -75,7 +77,7 @@ Visit your website and navigate to `/contact-us` to see the form in action.
 
 ## ISSUES
 
-Please report any bugs or feature requests to the Github issues page @ https://github.com/jdutil/spree_contact_us/issues
+Please report any bugs or feature requests to the Github issues page @ https://github.com/spree-contrib/spree_contact_us/issues
 
 ## Testing
 
@@ -99,16 +101,16 @@ Here are some ways *you* can contribute:
 * by using prerelease versions
 * by reporting bugs
 * by suggesting new features
-* by [translating to a new language](https://github.com/jdutil/spree_contact_us/tree/master/config/locales)
+* by [translating to a new language](https://github.com/spree-contrib/spree_contact_us/tree/master/config/locales)
 * by writing or editing documentation
 * by writing specifications
 * by writing code (**no patch is too small**: fix typos, add comments, clean up inconsistent whitespace)
 * by refactoring code
-* by resolving [issues](https://github.com/jdutil/spree_contact_us/issues)
+* by resolving [issues](https://github.com/spree-contrib/spree_contact_us/issues)
 * by reviewing patches
 
 ## Donating
 
 Bitcoin donations may be sent to: 15VHpDKWpuu8XyPpbTbRbewSRzMu5cVBMr
 
-Copyright (c) 2012-2013 Jeff Dutil, released under the [New BSD License](https://github.com/jdutil/spree_contact_us/tree/master/LICENSE).
+Copyright (c) 2012-2013 Jeff Dutil, released under the [New BSD License](https://github.com/spree-contrib/spree_contact_us/tree/master/LICENSE).
