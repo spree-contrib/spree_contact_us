@@ -31,7 +31,7 @@ To install from edge:
 
 Or install from latest stable version:
 
-    gem 'spree_contact_us', '~> 3.0'
+    gem 'spree_contact_us', github: 'spree-contrib/spree_contact_us', branch: '3-0-stable'
 
 From `Rails.root` run:
 
