@@ -8,8 +8,6 @@ A Rails 3+ Engine providing a basic contact form as a Spree Extension.
 
 Modified version of the `contact_us` gem to work with Spree.
 
-For more information please see https://github.com/spree-contrib/contact_us
-
 ## REQUIREMENTS
 
 SpreeContactUs requires:
@@ -77,6 +75,10 @@ By default the preference has an empty string value so no flash messages will be
 ## USAGE
 
 Visit your website and navigate to `/contact-us` to see the form in action.
+
+Be aware that stylesheet customization would be required as the contact-us class does not automatically inherit all the necessary styles.
+
+Refer to [Spree Guide](https://guides.spreecommerce.com/developer/asset.html) on how to go about it.
 
 ## ISSUES
 
