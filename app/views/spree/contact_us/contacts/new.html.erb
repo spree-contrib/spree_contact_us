@@ -2,7 +2,7 @@
   <meta name="title" content="<%= Spree.t(:contact_us_title) %>">
 <% end -%>
 
-<% content_for :sidebar do 
+<% content_for :sidebar do
    if "products" == @current_controller && @taxon %>
     <%= render :partial => "spree/shared/filters" %>
   <% else %>
@@ -26,6 +26,16 @@
     <span class="required">*</span><br/>
     <%= f.email_field :email, class: 'required form-control email' %>
   </p>
+  <p>
+    <%= f.label :phone %>
+    <span class="required">*</span><br/>
+    <%= f.text_field :phone, class: 'required form-control phone' %>
+  </p>
+  <p>
+    <%= f.label :company %>
+    <!-- <span class="required">*</span><br/> -->
+    <%= f.text_field :company, class: 'required form-control company' %>
+  </p>
   <% if SpreeContactUs.require_subject %>
     <p>
       <%= f.label :subject %>
@@ -39,6 +49,6 @@
     <%= f.text_area :message, class: 'required form-control' %>
   </p>
   <p>
-    <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :id => 'contact_us_contact_submit', :title => Spree.t(:submit) %>
+    <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :id => 'contact_us_contact_submit', :title => Spree.t(:submit), :class => 'btn btn-primary' %>
   </p>
 <% end %>
