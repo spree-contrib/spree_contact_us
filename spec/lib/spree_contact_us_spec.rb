@@ -11,13 +11,13 @@ describe SpreeContactUs do
   end
 
   it "should be valid" do
-    SpreeContactUs.should be_a(Module)
+    expect(SpreeContactUs).to be_a(Module)
   end
 
   describe 'setup block' do
     it 'should yield self' do
       SpreeContactUs.setup do |config|
-        SpreeContactUs.should eql(config)
+        expect(SpreeContactUs).to eql(config)
       end
     end
   end
@@ -25,28 +25,28 @@ describe SpreeContactUs do
   describe 'mailer_from' do
     it 'should be configurable' do
       SpreeContactUs.mailer_from = "contact@please-change-me.com"
-      SpreeContactUs.mailer_from.should eql("contact@please-change-me.com")
+      expect(SpreeContactUs.mailer_from).to eql("contact@please-change-me.com")
     end
   end
 
   describe 'mailer_to' do
     it 'should be configurable' do
       SpreeContactUs.mailer_to = "contact@changed-me.com"
-      SpreeContactUs.mailer_to.should eql("contact@changed-me.com")
+      expect(SpreeContactUs.mailer_to).to eql("contact@changed-me.com")
     end
   end
 
   describe 'require_name' do
     it 'should be configurable' do
       SpreeContactUs.require_name = true
-      SpreeContactUs.require_name.should eql(true)
+      expect(SpreeContactUs.require_name).to eql(true)
     end
   end
 
   describe 'require_subject' do
     it 'should be configurable' do
       SpreeContactUs.require_subject = true
-      SpreeContactUs.require_subject.should eql(true)
+      expect(SpreeContactUs.require_subject).to eql(true)
     end
   end
 

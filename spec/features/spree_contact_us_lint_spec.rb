@@ -18,11 +18,11 @@ describe 'Contact Us page', type: :feature, js: true do
   it 'displays default contact form properly' do
     visit spree.contact_us_path
     within "form#new_contact_us_contact" do
-      page.should have_selector "input#contact_us_contact_email"
-      page.should have_selector "textarea#contact_us_contact_message"
-      page.should_not have_selector "input#contact_us_contact_name"
-      page.should_not have_selector "input#contact_us_contact_subject"
-      page.should have_selector "input#contact_us_contact_submit"
+      expect(page).to have_selector "input#contact_us_contact_email"
+      expect(page).to have_selector "textarea#contact_us_contact_message"
+      expect(page).not_to have_selector "input#contact_us_contact_name"
+      expect(page).not_to have_selector "input#contact_us_contact_subject"
+      expect(page).to have_selector "input#contact_us_contact_submit"
     end
   end
 
@@ -47,10 +47,10 @@ describe 'Contact Us page', type: :feature, js: true do
 
       it "The email should have been sent with the correct attributes" do
         mail = ActionMailer::Base.deliveries.last
-        mail.to.should == ['contact@please-change-me.com']
-        mail.from.should == ['test@example.com']
-        mail.text_part.body.should match 'howdy'
-        ActionMailer::Base.deliveries.size.should == 1
+        expect(mail.to).to eq ['contact@please-change-me.com']
+        expect(mail.from).to eq ['test@example.com']
+        expect(mail.text_part.body).to match 'howdy'
+        expect(ActionMailer::Base.deliveries.size).to eq 1
       end
     end
 
@@ -63,12 +63,12 @@ describe 'Contact Us page', type: :feature, js: true do
         end
 
         it "I should see two error messages" do
-          page.should have_content "Please enter a valid email address"
-          page.should have_content "This field is required"
+          expect(page).to have_content "Please enter a valid email address"
+          expect(page).to have_content "This field is required"
         end
 
         it "An email should not have been sent" do
-          ActionMailer::Base.deliveries.size.should == 0
+          expect(ActionMailer::Base.deliveries.size).to eq 0
         end
       end
     end
@@ -88,8 +88,8 @@ describe 'Contact Us page', type: :feature, js: true do
     end
 
     it "displays an input for name and subject" do
-      page.should have_selector "input#contact_us_contact_name"
-      page.should have_selector "input#contact_us_contact_subject"
+      expect(page).to have_selector "input#contact_us_contact_name"
+      expect(page).to have_selector "input#contact_us_contact_subject"
     end
 
     context "Submitting the form" do
@@ -105,17 +105,17 @@ describe 'Contact Us page', type: :feature, js: true do
         end
 
         it "I should be redirected to the homepage" do
-          current_path.should == "/"
+          expect(current_path).to eq "/"
         end
 
         it "The email should have been sent with the correct attributes" do
           mail = ActionMailer::Base.deliveries.last
-          mail.text_part.body.should match 'howdy'
-          mail.text_part.body.should match 'Jeff'
-          mail.from.should == ['test@example.com']
-          mail.subject.should match 'Testing contact form.'
-          mail.to.should == ['contact@please-change-me.com']
-          ActionMailer::Base.deliveries.size.should == 1
+          expect(mail.text_part.body).to match 'howdy'
+          expect(mail.text_part.body).to match 'Jeff'
+          expect(mail.from).to eq ['test@example.com']
+          expect(mail.subject).to match 'Testing contact form.'
+          expect(mail.to).to eq ['contact@please-change-me.com']
+          expect(ActionMailer::Base.deliveries.size).to eq 1
         end
       end
 
@@ -125,11 +125,11 @@ describe 'Contact Us page', type: :feature, js: true do
         end
 
         it "I should see error messages" do
-          page.should have_content "This field is required"
+          expect(page).to have_content "This field is required"
         end
 
         it "An email should not have been sent" do
-          ActionMailer::Base.deliveries.size.should == 0
+          expect(ActionMailer::Base.deliveries.size).to eq 0
         end
       end
     end
