@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Contact Us page', js: true do
+describe 'Contact Us page', type: :feature, js: true do
 
   after do
     ActionMailer::Base.deliveries = []
@@ -37,10 +37,12 @@ describe 'Contact Us page', js: true do
         fill_in 'Email', :with => 'test@example.com'
         fill_in 'Message', :with => 'howdy'
         click_button 'Submit'
+
+        expect(page).to have_content I18n.t('spree.contact_us.notices.success') # wait until success
       end
 
-      it "I should be redirected to the homepage" do
-        current_path.should == "/"
+      it "I should be redirected to the homepage with success flash message" do
+        expect(current_path).to eq "/"
       end
 
       it "The email should have been sent with the correct attributes" do
@@ -98,6 +100,8 @@ describe 'Contact Us page', js: true do
           fill_in 'contact_us_contact[name]', :with => 'Jeff'
           fill_in 'contact_us_contact[subject]', :with => 'Testing contact form.'
           click_button 'Submit'
+
+          expect(page).to have_content I18n.t('spree.contact_us.notices.success') # wait until success
         end
 
         it "I should be redirected to the homepage" do
