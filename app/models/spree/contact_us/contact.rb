@@ -31,7 +31,7 @@ module Spree
 
       def save
         if self.valid?
-          Spree::ContactUs::ContactMailer.contact_email(self).deliver
+          Spree::ContactUs::ContactMailer.contact_email(self).deliver_now
           return true
         end
         return false

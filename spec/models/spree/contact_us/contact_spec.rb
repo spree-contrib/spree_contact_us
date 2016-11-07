@@ -69,7 +69,7 @@ describe Spree::ContactUs::Contact do
 
       it 'should send email and return true if records valid' do
         mail = Mail.new(:from=>"Valid@Email.com", :to => "test@test.com")
-        mail.stub(:deliver).and_return(true)
+        mail.stub(:deliver_now).and_return(true)
         contact = Spree::ContactUs::Contact.new(:email => "Valid@Email.com", :message => "Test")
         Spree::ContactUs::ContactMailer.should_receive(:contact_email).with(contact).and_return(mail)
         contact.save.should eql(true)
