@@ -1,3 +1,8 @@
+before_install:
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.15.0/geckodriver-v0.15.0-linux64.tar.gz
+  - mkdir geckodriver
+  - tar -xzf geckodriver-v0.15.0-linux64.tar.gz -C geckodriver
+  - export PATH=$PATH:$PWD/geckodriver
 before_script:
   - "sh -e /etc/init.d/xvfb start"
   - "bundle exec rake test_app"
@@ -5,8 +10,8 @@ script:
   - "export DISPLAY=:99.0"
   - "bundle exec rspec spec"
 rvm:
-  - 2.0
-  - 2.1
+  - 2.3.1
+  - 2.4.1
   - ruby-head
 language: ruby
 matrix:
@@ -15,3 +20,5 @@ matrix:
 notifications:
   recipients:
     - JDutil@BurlingtonWebApps.com
+addons:
+  firefox: "52.0"
