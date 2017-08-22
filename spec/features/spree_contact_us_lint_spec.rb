@@ -16,11 +16,11 @@ describe "Contact Us page", type: :feature, js: true do
   it "displays default contact form properly" do
     visit spree.contact_us_path
     within "form#new_contact_us_contact" do
-      # expect(page).to have_selector "input#contact_us_contact_email"
-      # expect(page).to have_selector "textarea#contact_us_contact_message"
-      # expect(page).to_not have_selector "input#contact_us_contact_name"
-      # expect(page).to_not have_selector "input#contact_us_contact_subject"
-      # expect(page).to have_selector "input#contact_us_contact_submit"
+      expect(page).to have_selector "input#contact_us_contact_email"
+      expect(page).to have_selector "textarea#contact_us_contact_message"
+      expect(page).to_not have_selector "input#contact_us_contact_name"
+      expect(page).to_not have_selector "input#contact_us_contact_subject"
+      expect(page).to have_selector "input#contact_us_contact_submit"
     end
   end
 
