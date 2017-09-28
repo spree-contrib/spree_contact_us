@@ -12,7 +12,7 @@ describe Spree::ContactUs::ContactsController, type: :controller do
     end
 
     it "should redirect to root path with no contact tracking flash message" do
-      spree_post :create, contact_us_contact: @contact_attributes
+      post :create, params: { contact_us_contact: @contact_attributes }
       expect(flash[:notice]).to_not be_nil
       expect(flash[:contact_tracking]).to be_nil
       expect(response).to redirect_to(spree.root_path)
@@ -25,7 +25,7 @@ describe Spree::ContactUs::ContactsController, type: :controller do
     end
 
     it "should redirect to root path with both notice and conversion flash messages" do
-      spree_post :create, contact_us_contact: @contact_attributes
+      post :create, params: { contact_us_contact: @contact_attributes }
       expect(flash[:notice]).to_not be_nil
       expect(flash[:contact_tracking]).to eql("something")
       expect(response).to redirect_to(spree.root_path)
@@ -35,12 +35,13 @@ describe Spree::ContactUs::ContactsController, type: :controller do
   context "prevent malicious posts" do
     it "should not error when contact_us_contact is not present" do
       expect do
-        spree_post :create,
-                   "utf8" => "a",
-                   "g=contact_us_contact" => { "nam" => "" },
-                   "xtcontact_us_contact" => { "emai" => "" },
-                   "ilcontact_us_contact" => { "messag" => "ea_n" },
-                   "l_comm" => "itSend Messa"
+        post :create, params: {
+          "utf8" => "a",
+          "g=contact_us_contact" => { "nam" => "" },
+          "xtcontact_us_contact" => { "emai" => "" },
+          "ilcontact_us_contact" => { "messag" => "ea_n" },
+          "l_comm" => "itSend Messa"
+        }
       end.to_not raise_error
     end
   end

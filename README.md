@@ -1,10 +1,9 @@
 # SpreeContactUs 
-[![Build Status](https://secure.travis-ci.org/spree-contrib/spree_contact_us.png)](http://travis-ci.org/spree-contrib/spree_contact_us) [![Dependency Status](https://gemnasium.com/spree-contrib/spree_contact_us.png?travis)](https://gemnasium.com/spree-contrib/spree_contact_us) [![Click here to lend your support to: SpreeContactUs and make a donation at www.pledgie.com !](http://www.pledgie.com/campaigns/17259.png?skin_name=chrome)][pledgie]
-A Rails 3+ Engine providing a basic contact form as a Spree Extension.
+[![Build Status](https://secure.travis-ci.org/spree-contrib/spree_contact_us.png)](http://travis-ci.org/spree-contrib/spree_contact_us) [![Dependency Status](https://gemnasium.com/spree-contrib/spree_contact_us.png?travis)](https://gemnasium.com/spree-contrib/spree_contact_us)
+A Rails 4+ Engine providing a basic contact form as a Spree Extension.
 
 [travis]: http://travis-ci.org/spree-contrib/spree_contact_us
 [gemnasium]: https://gemnasium.com/spree-contrib/spree_contact_us
-[pledgie]: http://www.pledgie.com/campaigns/17259
 
 Modified version of the `contact_us` gem to work with Spree.
 
@@ -12,8 +11,8 @@ Modified version of the `contact_us` gem to work with Spree.
 
 SpreeContactUs requires:
 
-* Spree Core 1.0.0 or greater
-* Ruby 1.9.2 or greater.
+* Spree Core 3.1 or greater
+* Ruby 2.2.0 or greater.
 
 ## CAUTION
 

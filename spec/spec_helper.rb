@@ -37,6 +37,7 @@ RSpec.configure do |config|
   config.include Spree::TestingSupport::ControllerRequests, type: :controller
   config.include Spree::TestingSupport::Preferences
   config.include Spree::TestingSupport::UrlHelpers
+  config.include Devise::Test::ControllerHelpers, type: :controller
 
   # Capybara javascript drivers require transactional fixtures set to false, and we use DatabaseCleaner
   # to cleanup after each test instead.  Without transactional fixtures set to false the records created
