@@ -26,11 +26,6 @@ describe Spree::ContactUs::Contact do
 
   describe "Validations" do
 
-    it {should validate_presence_of(:email)}
-    it {should validate_presence_of(:message)}
-    it {should_not validate_presence_of(:name)}
-    it {should_not validate_presence_of(:subject)}
-
     context 'with name and subject settings' do
 
       after do
@@ -42,9 +37,6 @@ describe Spree::ContactUs::Contact do
         SpreeContactUs.require_name = true
         SpreeContactUs.require_subject =true
       end
-
-      it {should validate_presence_of(:name)}
-      it {should validate_presence_of(:subject)}
 
     end
 
