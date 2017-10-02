@@ -14,21 +14,11 @@ SpreeContactUs requires:
 * Spree Core 3.1 or greater
 * Ruby 2.2.0 or greater.
 
-## CAUTION
-
-**THIS IS THE MASTER BRANCH IS THE DEVELOPMENT OF SPREE CONTACT US, IT REFLECTS THE WORK THAT IS CURRENTLY DONE AND CAN THEREFORE CONTAIN BUGS. FOR PRODUCTION ENVIRONMENT YOU SHOULD USE THE [LATEST STABLE VERSION](https://github.com/spree-contrib/spree_contact_us/tree/3-0-stable).**
-
 ## INSTALLATION
 
 In your `Gemfile`, add the following dependencies:
 
-To install from edge:
-
     gem 'spree_contact_us', :git => 'https://github.com/spree-contrib/spree_contact_us'
-
-Or install from latest stable version:
-
-    gem 'spree_contact_us', github: 'spree-contrib/spree_contact_us', branch: '3-0-stable'
 
 From `Rails.root` run:
 
