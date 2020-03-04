@@ -11,12 +11,12 @@ Gem::Specification.new do |s|
   s.email             = 'jdutil@burlingtonwebapps.com'
   s.homepage          = 'http://github.com/jdutil/spree_contact_us'
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.files        = `git ls-files`.split("\n")
+  s.test_files   = `git ls-files -- spec/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '>= 3.1.0', '< 4.0'
+  s.add_dependency 'spree_core', '>= 3.1.0', '< 5.0'
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'capybara-screenshot'
