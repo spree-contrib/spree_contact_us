@@ -8,7 +8,7 @@ class Spree::ContactUs::ContactsController < Spree::StoreController
       if Spree::ContactUs::Config.contact_tracking_message.present?
         flash[:contact_tracking] = Spree::ContactUs::Config.contact_tracking_message
       end
-      redirect_to(spree.root_path, :notice => Spree.t('contact_us.notices.success'))
+      redirect_to(spree.root_path, :notice => Spree.t('spree_contact_us.notices.success'))
     else
       render :new
     end
@@ -18,6 +18,10 @@ class Spree::ContactUs::ContactsController < Spree::StoreController
     @contact = Spree::ContactUs::Contact.new
     @taxonomies = Spree::Taxonomy.includes(root: :children)
   end
+
+  def meta_data_tags
+  end
+  helper_method :meta_data_tags
 
   private
 
