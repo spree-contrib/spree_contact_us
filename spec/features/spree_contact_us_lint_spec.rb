@@ -11,6 +11,8 @@ describe "Contact Us page", type: :feature, js: true do
   before do
     ActionMailer::Base.deliveries = []
     SpreeContactUs.mailer_to = "contact@please-change-me.com"
+    create(:store)
+    allow_any_instance_of(Spree::BaseHelper).to receive(:meta_data).and_return({})
   end
 
   it "displays default contact form properly" do
@@ -122,7 +124,10 @@ describe "Contact Us page", type: :feature, js: true do
         end
 
         it "I should see error messages" do
-          expect(page).to have_content "There were problems with the following fields:"
+          expect(page).to have_content "Email can't be blank"
+          expect(page).to have_content "Message can't be blank"
+          expect(page).to have_content "Name can't be blank"
+          expect(page).to have_content "Subject can't be blank"
         end
 
         it "An email should not have been sent" do

@@ -33,7 +33,7 @@ require 'spree/testing_support/preferences'
 require 'spree/testing_support/url_helpers'
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   config.include Spree::TestingSupport::ControllerRequests, type: :controller
   config.include Spree::TestingSupport::Preferences
   config.include Spree::TestingSupport::UrlHelpers
@@ -60,4 +60,8 @@ RSpec.configure do |config|
   config.after :each do
     DatabaseCleaner.clean
   end
+end
+
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(app, :phantomjs => Phantomjs.path, :js_errors => false, :window_size => [1600, 1200])
 end

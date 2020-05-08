@@ -1,6 +1,10 @@
 require "spec_helper".freeze
 
 describe Spree::ContactUs::ContactsController, type: :controller do
+  before do
+    create(:store)
+  end
+
   before(:each) do
     SpreeContactUs.mailer_to = "test@example.com"
     @contact_attributes = { email: "Valid@Email.com", message: "Test" }
