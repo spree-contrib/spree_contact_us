@@ -1,7 +1,6 @@
 module Spree
   module ContactUs
     class Contact
-
       include ActiveModel::Conversion
       include ActiveModel::Validations
 
@@ -15,22 +14,22 @@ module Spree
          \.     # period
         [^\s@]* # 0 or more non-at-sign characters, accepts any number of periods
         [^\s.@] # non-at-sign and non-period character
-      \z/x
+      \z/x.freeze
 
-      validates :email,   :format => { :with => EMAIL_REGEX },
-                          :presence => true
-      validates :message, :presence => true
-      validates :name,    :presence => {:if => Proc.new{SpreeContactUs.require_name}}
-      validates :subject, :presence => {:if => Proc.new{SpreeContactUs.require_subject}}
+      validates :email,   format: { with: EMAIL_REGEX },
+                          presence: true
+      validates :message, presence: true
+      validates :name,    presence: { if: proc { SpreeContactUs.require_name } }
+      validates :subject, presence: { if: proc { SpreeContactUs.require_subject } }
 
       def initialize(attributes = {})
-        [:email, :message, :name, :subject].each do |attribute|
-          self.send("#{attribute}=", attributes[attribute]) if attributes and attributes.has_key?(attribute)
+        %i[email message name subject].each do |attribute|
+          send("#{attribute}=", attributes[attribute]) if attributes&.key?(attribute)
         end
       end
 
       def save
-        if self.valid?
+        if valid?
           Spree::ContactUs::ContactMailer.contact_email(self).deliver_now
           return true
         end

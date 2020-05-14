@@ -1,7 +1,6 @@
 # Use this initializer to configure the contact mailer.
 
 SpreeContactUs.setup do |config|
-
   # ==> Mailer Configuration
 
   # Configure the e-mail address which email notifications should be sent from.  If emails must be sent from a verified email address you may set it here.
@@ -10,7 +9,7 @@ SpreeContactUs.setup do |config|
   config.mailer_from = nil
 
   # Configure the e-mail address which should receive the contact form email notifications.
-  config.mailer_to = "contact@please-change-me.com"
+  config.mailer_to = 'contact@please-change-me.com'
 
   # ==> Form Configuration
 
@@ -19,5 +18,4 @@ SpreeContactUs.setup do |config|
 
   # Configure the form to ask for a subject.
   config.require_subject = false
-
 end
