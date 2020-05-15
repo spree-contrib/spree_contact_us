@@ -11,7 +11,7 @@ Modified version of the `contact_us` gem to work with Spree.
 
 SpreeContactUs requires:
 
-* Spree Core 3.1 or greater
+* Spree Core 4.0 or greater
 * Ruby 2.2.0 or greater.
 
 ## INSTALLATION

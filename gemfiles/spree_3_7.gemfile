@@ -2,7 +2,8 @@
 
 source "https://rubygems.org"
 
-gem "spree", github: "spree/spree", branch: "master"
+gem "spree", "~> 3.7.0"
+gem "sass-rails"
 gem "rails-controller-testing"
 
 gemspec path: "../"

@@ -11,11 +11,20 @@ en:
           message: "Message"
           subject: "Subject"
     contact_us_title: "Contact Us"
+    send: Send
     sent_by_contact_form: "Sent by contact form from %{email}"
     sent_by_name: "Sent by %{name} from %{email}"
     subject: "Contact Us message from %{email}"
     submit: "Submit"
 
-    contact_us:
+    spree_contact_us:
+      address_line1: address line 1
+      address_line2: address line 2
+      call_us: Call us now
+      call_us_number: 135645352
+      email: Email
+      header: header
+      left_title: left title
+      message_placeholder: Message
       notices:
         success: "Contact email was successfully sent."

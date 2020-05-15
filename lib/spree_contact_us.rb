@@ -20,5 +20,4 @@ module SpreeContactUs
   def self.setup
     yield self
   end
-
 end
