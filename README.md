@@ -1,5 +1,5 @@
 # SpreeContactUs 
-[![Build Status](https://secure.travis-ci.org/spree-contrib/spree_contact_us.png)](http://travis-ci.org/spree-contrib/spree_contact_us)
+[![Build Status](https://secure.travis-ci.org/spree-contrib/spree_contact_us.svg)](http://travis-ci.org/spree-contrib/spree_contact_us)
 
 Adds configurable contact us form for Spree Commeerce applications.
 
