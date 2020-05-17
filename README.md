@@ -5,8 +5,6 @@ Adds configurable contact us form for Spree Commeerce applications.
 
 [travis]: http://travis-ci.org/spree-contrib/spree_contact_us
 
-Modified version of the `contact_us` gem to work with Spree.
-
 ## Installation
 
 In your `Gemfile`, add the following dependencies:
