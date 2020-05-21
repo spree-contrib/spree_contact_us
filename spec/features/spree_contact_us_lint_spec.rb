@@ -72,6 +72,17 @@ describe 'Contact Us page', type: :feature, js: true do
         it 'An email should not have been sent' do
           expect(ActionMailer::Base.deliveries.size).to eql(0)
         end
+
+        it 'does not change page url' do
+          expect(page).to have_current_path(spree.contact_us_path)
+        end
+
+        it 'does not show error after page refresh' do
+          visit current_path
+
+          expect(page).to have_field('contact_us_contact_message')
+          expect(page).to have_button('Send')
+        end
       end
     end
   end

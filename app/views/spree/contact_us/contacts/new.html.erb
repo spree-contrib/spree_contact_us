@@ -1,4 +1,4 @@
-<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
+<%= render partial: 'spree/shared/error_messages', locals: { target: @contact } %>
 
 <div class="contact-us">
   <div class="container">
@@ -22,7 +22,7 @@
           <%= Spree.t('spree_contact_us.left_title') %>
         </div>
 
-        <%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
+        <%= form_for @contact, url: contact_us_path, html: { novalidate: '' } do |f| %>
 
           <% if SpreeContactUs.require_name %>
             <%= f.text_field :name, class: 'required col-12 mt-3 mb-1 mb-lg-2', placeholder: true %>
@@ -35,8 +35,8 @@
           <% end %>
             <%= f.text_area :message, class: 'required col-12 mt-3 mb-3', rows: 4, placeholder: Spree.t('spree_contact_us.message_placeholder') %>
           <div class="text-center text-lg-left mt-lg-1 mb-4">
-            <%= f.submit Spree.t(:send), :alt => Spree.t(:send), :id => 'contact_us_contact_submit', :title => Spree.t(:send),
-                :class => 'col-7 col-lg-4 mb-4 mb-lg-0 btn btn-primary text-uppercase font-weight-bold'
+            <%= f.submit Spree.t(:send), alt: Spree.t(:send), id: 'contact_us_contact_submit', title: Spree.t(:send),
+                class: 'col-7 col-lg-4 mb-4 mb-lg-0 btn btn-primary text-uppercase font-weight-bold'
             %>
           </div>
         <% end %>
