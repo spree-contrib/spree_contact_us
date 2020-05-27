@@ -16,8 +16,8 @@ module Spree
         [^\s.@] # non-at-sign and non-period character
       \z/x.freeze
 
-      validates :email,   format: { with: EMAIL_REGEX },
-                          presence: true
+      validates :email,   presence: true
+      validates :email,   format: { with: EMAIL_REGEX }, if: -> { email.present? }
       validates :message, presence: true
       validates :name,    presence: { if: proc { SpreeContactUs.require_name } }
       validates :subject, presence: { if: proc { SpreeContactUs.require_subject } }
