@@ -83,6 +83,22 @@ describe 'Contact Us page', type: :feature, js: true do
           expect(page).to have_field('contact_us_contact_message')
           expect(page).to have_button('Send')
         end
+
+        it 'shows only invalid email error for email field' do
+          expect(page).not_to have_content "Email can't be blank"
+        end
+      end
+
+      context 'Email is blank' do
+        before do
+          fill_in 'Email', with: ''
+          fill_in 'Message', with: ''
+          click_button 'Send'
+        end
+
+        it 'shows only email blank error for email field' do
+          expect(page).not_to have_content 'Email is invalid'
+        end
       end
     end
   end
