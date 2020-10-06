@@ -1,0 +1,29 @@
+# Sample localization file for Vietnamese. Add more files in this directory for other locales.
+vi:
+  spree:
+    activemodel:
+      attributes:
+        contact_us/contact:
+          name: "Tên"
+          email: "Email"
+          message: "Tin nhắn"
+          subject: "Tiêu đề"
+    contact_us_title: "Liên Hệ Với Chúng Tôi"
+    send: Gửi
+    sent_by_contact_form: "Được gửi bởi Form Liên Hệ từ %{email}"
+    sent_by_name: "Gửi bởi %{name} từ %{email}"
+    subject: "Tin nhắn liên hệ với chúng tôi từ  %{email}"
+    submit: "Gửi"
+
+    spree_contact_us:
+      address_line1: địa chỉ thứ 1
+      address_line2: địa chỉ thứ 2
+      call_us: Gọi cho chúng tôi ngay bây giờ
+      call_us_number: 135645352
+      email: Email
+      header: tiêu đề
+      left_title: tiêu đề bên trái
+      message_placeholder: Tin nhắn
+      notices:
+        success: "Email liên hệ đã được gửi thành công."
+
