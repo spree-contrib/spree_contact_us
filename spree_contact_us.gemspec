@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'deface', '~> 1.0'
-  s.add_dependency 'spree_core', '>= 3.7.0', '< 4.2'
+  s.add_dependency 'spree_core', '>= 3.7.0'
 
   s.add_development_dependency 'spree_dev_tools'
 end
