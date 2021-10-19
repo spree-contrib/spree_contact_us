@@ -17,7 +17,7 @@ Run commands
 
   ```bash
   bundle install
-  undle exec rails g spree_contact_us:install
+  bundle exec rails g spree_contact_us:install
   ```
 
 In `config/initializers/spree_contact_us.rb` modify:
