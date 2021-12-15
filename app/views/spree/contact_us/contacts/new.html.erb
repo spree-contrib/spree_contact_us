@@ -31,7 +31,7 @@
           <%= f.email_field :email, class: 'required col-12 mt-3 mb-1 mb-lg-2', placeholder: true %>
 
           <% if SpreeContactUs.require_subject %>
-            <%= f.text_field :subject, class: 'required col-12 mt-3 mb-1 mb-lg-2' %>
+            <%= f.text_field :subject, class: 'required col-12 mt-3 mb-1 mb-lg-2', placeholder: true %>
           <% end %>
             <%= f.text_area :message, class: 'required col-12 mt-3 mb-3', rows: 4, placeholder: Spree.t('spree_contact_us.message_placeholder') %>
           <div class="text-center text-lg-left mt-lg-1 mb-4">
